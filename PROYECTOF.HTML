@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoFinal</title>
+    <h1>Palindromos</h1>
+    <h2>Esta pagina te indicara si tu palabra es un palindromo</h2>
+    <script>
+        //Palindromos 
+        function palindromos(){
+            let palin = document.getElementById("palin").value;
+            let i = 0;
+            let j = palin.length - 1;
+            console.log(j)
+
+            for (letra in palin){
+                console.log(palin[letra], "!==", palin[j]);
+                if(palin[letra] !== palin[j]){
+                    console.log("igules:", false);
+                    return document.write("No es un palindromo");
+                }
+                j--;
+            }
+            console.log("igules:", true);
+            return document.write("Es un palindromo")
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Ingresa palabra:<br>
+        <input type="text" placeholder="wow" id="palin">
+        <button onclick="palindromos()">Verificar</button>
+    </form>
+</body>
+</html>
